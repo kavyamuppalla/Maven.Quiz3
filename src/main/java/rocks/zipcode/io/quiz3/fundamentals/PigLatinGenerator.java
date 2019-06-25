@@ -5,6 +5,7 @@ package rocks.zipcode.io.quiz3.fundamentals;
  */
 public class PigLatinGenerator {
     public String translate(String str) {
+
         return null;
     }
 }

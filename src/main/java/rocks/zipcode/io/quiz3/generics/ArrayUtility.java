@@ -13,15 +13,32 @@ public class ArrayUtility<SomeType> {
     }
 
     public SomeType findOddOccurringValue() {
+        for(int i = 0 ; i < array.length; i++) {
+            if (getNumberOfOccurrences(array[i]) % 2 != 0) {
+                return array[i];
+            }
+        }
         return null;
     }
 
     public SomeType findEvenOccurringValue() {
+
+        for(int i = 0 ; i < array.length; i++) {
+            if (getNumberOfOccurrences(array[i]) % 2 == 0) {
+                return array[i];
+            }
+        }
         return null;
     }
 
     public Integer getNumberOfOccurrences(SomeType valueToEvaluate) {
-        return null;
+        Integer count = 0;
+        for(int i = 0; i < this.array.length; i ++) {
+            if(this.array[i] == valueToEvaluate) {
+                count = count + 1;
+            }
+        }
+        return count;
     }
 
     public SomeType[] filter(Function<SomeType, Boolean> predicate) {
